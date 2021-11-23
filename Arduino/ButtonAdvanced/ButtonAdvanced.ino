@@ -18,7 +18,6 @@ FlashStorage(HasModifiedBrightness, int);
 
 int EncoderPinALast = LOW;
 bool MegaButtonHeldDown = false;
-int Brightness = 100;
 
 void setup() {
   pinMode(VOLUME_DOWN_PIN, INPUT_PULLUP);
@@ -89,7 +88,6 @@ void ProcessVolumeChange() {
         EnableLED.write(1);
         setPurple();
       }
-      Serial.println(Brightness);
     }
   }
   EncoderPinALast = n;
